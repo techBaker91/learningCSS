@@ -1,0 +1,189 @@
+/* Main Body */
+body {
+    background-color: lightcyan;
+}
+
+/* may not need to keep, testing for smooth scroll with same page links */
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Headings */
+h1, h2, h3, h4 {
+    text-align: center;
+    color: rgb(126, 82, 0);
+    text-shadow: 2px 2px rgb(197, 197, 197);
+}
+
+h1 {
+    letter-spacing: 5px;
+}
+
+h2 {
+    font-style: italic;
+}  
+
+h4 {
+    float: left;
+}
+
+/* Nav Section */
+.nav {
+    margin: 20px;
+    width: 100%;
+}
+
+nav {
+   margin: 25px;
+   text-align: center;
+}
+
+.navA {
+    display: inline;
+    margin: 2px;
+}
+
+a {
+    color: black;
+    font-size: 1em;
+}
+
+/* Unvisited Link */
+a:link {
+    /* border: 1px inset black; */
+    padding: 18px;
+}
+
+/* Visited Link */
+a:visited {
+    padding: 18px;
+    color: red;
+}
+
+/* Mouse Over Link | A hover style MUST come after a:link and a:visited */
+a:hover {
+    background-color: rgb(126, 82, 0);
+    padding: 18px;
+    font-size: 150%;
+}
+
+/* Selected Link | An active style MUST come after a hover */
+a:active {
+    background-color: rgb(126, 82, 0);
+    padding: 18px;
+}
+
+/* Semantic Sections */
+.header {
+    border-style: inset;
+    border-width: 5px;
+}
+
+.main {
+    /* border-style: inset; */
+    border-radius: 5px;
+}
+
+.section {
+    border-style: inset;
+    border-radius: 10px;
+}
+
+.article {
+    border-style: inset;
+    border-radius: 10px;
+}
+
+.aside {
+    border-style: inset;
+    border-radius: 10px;
+}
+
+.footer {
+    display: inline;
+}
+
+/* Small Details */
+p {
+    color: rgb(126, 82, 0);
+    font-family: Verdana, sans-serif;
+    margin: 5px 10px;
+}
+
+.social {
+    float: right;
+}
+
+#pinkTree {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+}
+
+/* Various CSS Elements */
+
+p.a {
+    text-align-last: right;
+  }
+  
+  p.b {
+    text-align-last: center;
+  }
+  
+  p.c {
+    text-align-last: justify;
+  }
+
+  .weight {
+    font-weight: bold;
+  }
+
+  #d {
+    list-style-type: circle;
+  }
+  
+  #e {
+    list-style-type: square;
+  }
+  
+  #f {
+    list-style-type: upper-roman;
+  }
+  
+  #g {
+    list-style-type: lower-alpha;
+  }
+    
+  ol {
+    background: #ffbc58;
+    padding: 20px;
+  }
+  
+  ul {
+    background: #3399ff;
+    padding: 20px;
+  }
+  
+  ol li {
+    background: #ffe5e5;
+    color: darkred;
+    padding: 5px;
+    margin-left: 35px;
+  }
+  
+  ul li {
+    background: #cce5ff;
+    color: darkblue;
+    margin: 5px;
+  }
+
+ol li:hover {
+    background-color: black;
+  }
+
+ul li:hover {
+  background-color: #00ffff;
+}

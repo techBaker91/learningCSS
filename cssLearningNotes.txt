@@ -1,0 +1,309 @@
+CSS Learning Notes
+
+What is CSS?
+
+    CSS stands for Cascading Style Sheets
+    CSS describes how HTML elements are to be displayed on screen, paper, or in other media
+    CSS saves a lot of work. It can control the layout of multiple web pages all at once
+    External stylesheets are stored in CSS files
+
+CSS background - Shorthand property
+
+    To shorten the code, it is also possible to specify all the background properties in one single property. This is called a shorthand property.
+
+    Instead of writing:
+    body {
+    background-color: #ffffff;
+    background-image: url("img_tree.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+    }
+
+    You can use the shorthand property background:
+    Example
+
+    Use the shorthand property to set the background properties in one declaration:
+    body {
+    background: #ffffff url("img_tree.png") no-repeat right top;
+    }
+
+    When using the shorthand property the order of the property values is:
+
+    background-color
+    background-image
+    background-repeat
+    background-attachment
+    background-position
+
+Best Web Safe Fonts for HTML and CSS
+
+    Arial (sans-serif)
+    Verdana (sans-serif)
+    Tahoma (sans-serif)
+    Trebuchet MS (sans-serif)
+    Times New Roman (serif)
+    Georgia (serif)
+    Garamond (serif)
+    Courier New (monospace)
+    Brush Script MT (cursive)
+
+    Arial is the most widely used font for both online and printed media. Arial is also the default font in Google Docs.
+    Arial is one of the safest web fonts, and it is available on all major operating systems.
+
+    Times New Roman is one of the most recognizable fonts in the world. 
+    It looks professional and is used in many newspapers and "news" websites. 
+    It is also the primary font for Windows devices and applications.
+
+    Georgia is an elegant serif font. It is very readable at different font sizes, 
+    so it is a good candidate for mobile-responsive design
+
+    Courier New is the most widely used monospace serif font. Courier New is often used with coding displays, 
+    and many email providers use it as their default font. Courier New is also the standard font for movie screenplays.
+
+    The Brush Script MT font was designed to mimic handwriting. 
+    It is elegant and sophisticated, but can be hard to read. Use it carefully
+
+    Commonly Used Fallback Fonts:
+    Serif Fonts
+        Times New Roman
+        Georgia
+        Garamond
+    Sans-Serif Fonts
+        Arial
+        Helvetica
+        Tahoma
+        Verdana
+        Trebuchet MS
+        Geneva
+    Monospace Fonts
+        Courier New
+        Courier
+        Brush Script MT(cursive)
+        Copperplate(fantasy)
+        Papyrus(fantasy)
+        
+    If you do not specify a font size, the default size for normal text, like paragraphs, is 16px (16px=1em).
+
+    Set Font Size With Em
+
+    To allow users to resize the text (in the browser menu), many developers use em instead of pixels.
+    1em is equal to the current font size. The default text size in browsers is 16px. So, the default size of 1em is 16px.
+    The size can be calculated from pixels to em using this formula: pixels/16=em
+
+    Responsive Font Size
+
+    The text size can be set with a vw unit, which means the "viewport width".
+    That way the text size will follow the size of the browser window
+
+    Google Fonts
+
+    If you do not want to use any of the standard fonts in HTML, you can use Google Fonts.
+
+Google Fonts are free to use, and have more than 1000 fonts to choose from.
+    How To Use Google Fonts
+
+    Just add a special style sheet link in the <head> section and then refer to the font in the CSS
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    To use multiple Google fonts, just separate the font names with a pipe character (|), like this
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Trirong|Trirong">
+
+    Enabling Font Effects
+
+    Google has also enabled different font effects that you can use.
+
+    First add effect=effectname to the Google API, then add a special class name to the element that is going to use the special effect. 
+    The class name always starts with font-effect- and ends with the effectname
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire">
+    <h1 class="font-effect-fire">Sofia on Fire</h1>
+
+Font Pairing Rules
+
+    Here are some basic rules to create great font pairings:
+    1. Complement
+
+    It is always safe to find font pairings that complement one another.
+
+    A great font combination should harmonize, without being too similar or too different.
+    2. Use Font Superfamilies
+
+    A font superfamily is a set of fonts designed to work well together. 
+    So, using different fonts within the same superfamily is safe.
+
+    For example, the Lucida superfamily contains the following fonts: 
+    Lucida Sans, Lucida Serif, Lucida Typewriter Sans, Lucida Typewriter Serif and Lucida Math.
+    3. Contrast is King
+
+    Two fonts that are too similar will often conflict. 
+    However, contrasts, done the right way, brings out the best in each font.
+
+    Example: Combining serif with sans serif is a well known combination.
+
+    A strong superfamily includes both serif and sans serif variations of the same font (e.g. Lucida and Lucida Sans).
+    4. Choose Only One Boss
+
+    One font should be the boss. This establishes a hierarchy for the fonts on your page. 
+    This can be achieved by varying the size, weight and color.
+
+The CSS Font Property
+
+    To shorten the code, it is also possible to specify all the individual font properties in one property.
+
+    The font property is a shorthand property for:
+
+        font-style
+        font-variant
+        font-weight
+        font-size/line-height
+        font-family
+
+    Note: The font-size and font-family values are required. 
+    If one of the other values is missing, their default value are used
+
+How To Add Icons
+
+    The simplest way to add an icon to your HTML page, is with an icon library, such as Font Awesome.
+
+    Add the name of the specified icon class to any inline HTML element (like <i> or <span>).
+
+    All the icons in the icon libraries below, are scalable vectors that can be customized with CSS (size, color, shadow, etc.)
+    Font Awesome Icons
+
+    To use the Font Awesome icons, go to fontawesome.com, sign in, and get a code to add in the <head> section of your HTML page:
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    Note: No downloading or installation is required!
+
+Styling Links
+
+    Links can be styled with any CSS property (e.g. color, font-family, background, etc.).
+
+    In addition, links can be styled differently depending on what state they are in.
+    The four links states are:
+
+        a:link - a normal, unvisited link
+        a:visited - a link the user has visited
+        a:hover - a link when the user mouses over it
+        a:active - a link the moment it is clicked
+
+    When setting the style for several link states, there are some order rules:
+
+    a:hover MUST come after a:link and a:visited
+    a:active MUST come after a:hover
+
+    List - Shorthand property
+
+The list-style property is a shorthand property. It is used to set all the list properties in one declaration:
+    
+    Example
+    ul {
+    list-style: square inside url("sqpurple.gif");
+    }
+
+    When using the shorthand property, the order of the property values are:
+
+        list-style-type (if a list-style-image is specified, the value of this property will be displayed if the image for some reason cannot be displayed)
+        list-style-position (specifies whether the list-item markers should appear inside or outside the content flow)
+        list-style-image (specifies an image as the list item marker)
+
+    If one of the property values above is missing, the default value for the missing property will be inserted, if any
+
+Display 
+
+    Block-level Elements
+
+        A block-level element ALWAYS starts on a new line and takes up the full width available (stretches out to the left and right as far as it can).
+
+        Examples of block-level elements:
+
+            <div>
+            <h1> - <h6>
+            <p>
+            <form>
+            <header>
+            <footer>
+            <section>
+
+    Inline Elements
+
+        Examples of inline elements:
+
+        <span>
+        <a>
+        <img>
+
+    The display Property Values
+
+    The display property has many values:
+    Value 	                        Description
+    inline 	                        Displays an element as an inline element
+    block 	                        Displays an element as a block element
+    contents 	                    Makes the container disappear, making the child elements children of the element the next level up in the DOM
+    flex 	                        Displays an element as a block-level flex container
+    grid 	                        Displays an element as a block-level grid container
+    inline-block 	                Displays an element as an inline-level block container. The element itself is formatted as an inline element, but you can apply height and width values
+    inline-flex 	                Displays an element as an inline-level flex container
+    inline-grid 	                Displays an element as an inline-level grid container
+    inline-table 	                The element is displayed as an inline-level table
+    list-item 	                    Let the element behave like a <li> element
+    run-in 	                        Displays an element as either block or inline, depending on context
+    table 	                        Let the element behave like a <table> element
+    table-caption 	                Let the element behave like a <caption> element
+    table-column-group 	            Let the element behave like a <colgroup> element
+    table-header-group 	            Let the element behave like a <thead> element
+    table-footer-group 	            Let the element behave like a <tfoot> element
+    table-row-group 	            Let the element behave like a <tbody> element
+    table-cell 	                    Let the element behave like a <td> element
+    table-column 	                Let the element behave like a <col> element
+    table-row 	                    Let the element behave like a <tr> element
+    none 	                        The element is completely removed
+    initial 	                    Sets this property to its default value
+    inherit 	                    nherits this property from its parent element
+
+The position Property
+
+    The position property specifies the type of positioning method used for an element.
+
+    There are five different position values:
+
+        static
+        relative
+        fixed
+        absolute
+        sticky
+
+    Elements are then positioned using the top, bottom, left, and right properties. However, these properties will not work unless the position property is set first. 
+    They also work differently depending on the position value
+
+CSS Combinators
+
+    A combinator is something that explains the relationship between the selectors.
+
+    A CSS selector can contain more than one simple selector. Between the simple selectors, we can include a combinator.
+
+    There are four different combinators in CSS:
+
+        descendant selector (space)
+        child selector (>)
+        adjacent sibling selector (+)
+        general sibling selector (~)
+
+CSS Pseudo-classes
+    What are Pseudo-classes?
+
+    A pseudo-class is used to define a special state of an element.
+
+    For example, it can be used to:
+
+        Style an element when a user mouses over it
+        Style visited and unvisited links differently
+        Style an element when it gets focus
+ 
+    Syntax
+
+    The syntax of pseudo-classes:
+    selector:pseudo-class {
+    property: value;
+    }
+
+
+
+
