@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>CSS Test Bed</title>
         <link rel="stylesheet" href="style.css">
-        <script src="https://kit.fontawesome.com/yourCode.js" crossorigin="anonymous"></script>
+        
         <!--Get your own code at fontawesome.com-->
         <style>
             /*This internal style will take precedance over the linked style sheet because the style tag
@@ -37,131 +37,138 @@
                 <li class="navA"><a href="#">Print Files</a></li>
                 <li class="navA"><a href="#">Specifications</a></li>
                 <li class="navA"><a href="#">Gallery</a></li>
-                <li class="navA"><a href="#">About</a></li>
+                <li class="navA"><a href="#yup">About</a></li>
             </nav>
         </div>
-        <div class="section">
-            <section>
-                <h2>This area uses the Section tag</h2>
 
-                <h3>The text-align-last Property</h3>
+        <div class="flex-container">
+            <div class="left">
+                <div class="section">
+                    <section>
+                        <h2>This area uses the Section tag</h2>
 
-                <h3>text-align-last: right:</h3>
-                <p class="a">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, 
-                    at pulvinar felis blandit.</p>
+                        <h3>The text-align-last Property</h3>
 
-                <h3>text-align-last: center:</h3>
-                <p class="b">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, 
-                    at pulvinar felis blandit.</p>
+                        <h3>text-align-last: right:</h3>
+                        <p class="a">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, 
+                            at pulvinar felis blandit.</p>
 
-                <h3>text-align-last: justify:</h3>
-                <p class="c">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, 
-                at pulvinar felis blandit.</p>
-            </section>
-        </div>
-        <div class="article">
-            <article>
-                <h3>3D Print This</h3>
-                <p>You could put a relevant <span class="weight">article</span> here!</p><br>
-                <img id="pinkTree" src="images/img_tree.png" alt="pink tree">
-                <p>The image of the pink tree with an owl has a Z-Index of -1 which makes it appear behind everything else.</p>
-                <br>
-                <h3>Fade in a Box</h3>
+                        <h3>text-align-last: center:</h3>
+                        <p class="b">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, 
+                            at pulvinar felis blandit.</p>
 
-                <div class="container">
-                <img src="images/img_avatar.png" alt="Avatar" class="image" style="width:100%">
-                <div class="middle">
-                    <div class="text"><a id="guy" href="#">John Doe</a></a></div>
+                        <h3>text-align-last: justify:</h3>
+                        <p class="c">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, 
+                        at pulvinar felis blandit.</p>
+                    </section>
                 </div>
+                <div class="article">
+                    <article>
+                        <h3>3D Print This</h3>
+                        <p>You could put a relevant <span class="weight">article</span> here!</p><br>
+                        <img id="pinkTree" src="images/img_tree.png" alt="pink tree">
+                        <p>The image of the pink tree with an owl has a Z-Index of -1 which makes it appear behind everything else.</p>
+                        <br>
+                        <h3>Fade in a Box</h3>
+
+                        <div class="container">
+                        <img src="images/img_avatar.png" alt="Avatar" class="image" style="width:100%">
+                        <div class="middle">
+                            <div class="text"><a id="guy" href="#">John Doe</a></a></div>
+                        </div>
+                        </div>
+                    </article>
                 </div>
-            </article>
-        </div>
-        <div class="main">
-            <main>
-                <h2>Main Section</h2>
-                <p>This could be centered between a section and article on the left 
-                    and an aside section on the right</p><br>
-                <p>Hover over the div element below:</p>
-                <div id="effects"><h3>Look At Me!!</h3></div>
-                <div id="animate"></div>
-
-                <p><b>Note:</b> When an animation is finished, it goes back to its original style.</p>
-
-                <button class="button"><span>Hover </span></button>
-            </main>
-        </div>
-        <div class="aside">
-            <aside>
-                <h3>The list-style-type Property</h3>
-
-                <p>Example of unordered lists:</p>
-                <ul id="d">
-                    <li>Coffee</li>
-                    <li>Tea</li>
-                </ul>
-
-                <ul id="e">
-                    <li>Coffee</li>
-                    <li>Tea</li>
-                </ul>
-
-                <p>Example of ordered lists:</p>
-                <ol id="f">
-                    <li>Coffee</li>
-                    <li>Tea</li>
-                </ol>
-
-                <ol id="g">
-                    <li>Coffee</li>
-                    <li>Tea</li>
-                </ol>
-            </aside>
-        </div>
-        <footer>
-            <div>
-                <h4 class="footer">3D Inc. 2024</h4>
-                <p class="social footer">Social media links and such could go here!</p>
             </div>
+            <div class="main">
+                <main>
+                    <h2>Main Section</h2>
+                    <p>This could be centered between a section and article on the left 
+                        and an aside section on the right</p><br>
+                    <p>Hover over the div element below:</p>
+                    <div id="effects"><h3>Look At Me!!</h3></div>
+                    <div id="animate"></div>
 
-            <h2>Image Modal</h2>
+                    <p><b>Note:</b> When an animation is finished, it goes back to its original style.</p>
 
-            <p>Here, we use CSS to create a modal (dialog box) that is hidden by default.</p>
-            <p>We use JavaScript to trigger the modal and to display the current image inside the modal when it is clicked on. 
-                Also note that we use the value from the image's "alt" attribute as an image caption text inside the modal.</p>
-            <p>Don't worry if you do not understand the code right away. When you are done with CSS, go to our JavaScript Tutorial to learn more.</p>
-            
-            <img id="myImg" src="images/img_lights.jpg" alt="Northern Lights, Norway" width="300" height="200">
-            
-            <!-- The Modal -->
-            <div id="myModal" class="modal">
-              <span class="close">&times;</span>
-              <img class="modal-content" id="img01">
-              <div id="caption"></div>
+                    <button class="button"><span>Hover </span></button>
+
+                    <div class="ex1">outline</div>
+
+                    <h2>Image Modal</h2>
+
+                    <p>Here, we use CSS to create a modal (dialog box) that is hidden by default.</p>
+                    <p>We use JavaScript to trigger the modal and to display the current image inside the modal when it is clicked on. 
+                        Also note that we use the value from the image's "alt" attribute as an image caption text inside the modal.</p>
+                    <p>Don't worry if you do not understand the code right away. When you are done with CSS, go to our JavaScript Tutorial to learn more.</p>
+                    
+                    <img id="myImg" src="images/img_lights.jpg" alt="Northern Lights, Norway" width="300" height="200">
+                    
+                    <!-- The Modal -->
+                    <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img01">
+                    <div id="caption"></div>
+                    </div>
+                    
+                    <script>
+                    // Get the modal
+                    var modal = document.getElementById('myModal');
+                    
+                    // Get the image and insert it inside the modal - use its "alt" text as a caption
+                    var img = document.getElementById('myImg');
+                    var modalImg = document.getElementById("img01");
+                    var captionText = document.getElementById("caption");
+                    img.onclick = function(){
+                    modal.style.display = "block";
+                    modalImg.src = this.src;
+                    captionText.innerHTML = this.alt;
+                    }
+                    
+                    // Get the <span> element that closes the modal
+                    var span = document.getElementsByClassName("close")[0];
+                    
+                    // When the user clicks on <span> (x), close the modal
+                    span.onclick = function() { 
+                    modal.style.display = "none";
+                    }
+                    </script>
+
+                </main>
             </div>
-            
-            <script>
-            // Get the modal
-            var modal = document.getElementById('myModal');
-            
-            // Get the image and insert it inside the modal - use its "alt" text as a caption
-            var img = document.getElementById('myImg');
-            var modalImg = document.getElementById("img01");
-            var captionText = document.getElementById("caption");
-            img.onclick = function(){
-              modal.style.display = "block";
-              modalImg.src = this.src;
-              captionText.innerHTML = this.alt;
-            }
-            
-            // Get the <span> element that closes the modal
-            var span = document.getElementsByClassName("close")[0];
-            
-            // When the user clicks on <span> (x), close the modal
-            span.onclick = function() { 
-              modal.style.display = "none";
-            }
-            </script>
+            <div class="aside">
+                <aside>
+                    <h3>The list-style-type Property</h3>
 
-        </footer>
+                    <p>Example of unordered lists:</p>
+                    <ul id="d">
+                        <li>Coffee</li>
+                        <li>Tea</li>
+                    </ul>
+
+                    <ul id="e">
+                        <li>Coffee</li>
+                        <li>Tea</li>
+                    </ul>
+
+                    <p>Example of ordered lists:</p>
+                    <ol id="f">
+                        <li>Coffee</li>
+                        <li>Tea</li>
+                    </ol>
+
+                    <ol id="g">
+                        <li>Coffee</li>
+                        <li>Tea</li>
+                    </ol>
+                </aside>
+            </div>
+        </div>
+        <div class="bottom"></div>
+            <footer id="yup">
+            <h4 class="footer">3D Inc. 2024</h4>
+            <p class="social footer">Social media links and such could go here!</p>
+            </footer>
+        </div>
     </body>
 </html>
