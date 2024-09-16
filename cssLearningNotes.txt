@@ -304,6 +304,829 @@ CSS Pseudo-classes
     property: value;
     }
 
+What are Pseudo-Elements?
+
+    A CSS pseudo-element is used to style specified parts of an element.
+
+    All CSS Pseudo Elements
+    Selector 	        Example 	        Example description
+    ::after 	        p::after 	        Insert something after the content of each <p> element
+    ::before 	        p::before 	        Insert something before the content of each <p> element
+    ::first-letter  	p::first-letter 	Selects the first letter of each <p> element
+    ::first-line 	    p::first-line 	    Selects the first line of each <p> element
+    ::marker 	        ::marker 	        Selects the markers of list items
+    ::selection 	    p::selection 	    Selects the portion of an element that is selected by a user
+
+    All CSS Pseudo Classes
+    Selector 	            Example 	            Example description
+    :active 	            a:active 	            Selects the active link
+    :checked 	            input:checked 	        Selects every checked <input> element
+    :disabled 	            input:disabled 	        Selects every disabled <input> element
+    :empty 	                p:empty 	            Selects every <p> element that has no children
+    :enabled 	            input:enabled 	        Selects every enabled <input> element
+    :first-child 	        p:first-child 	        Selects every <p> elements that is the first child of its parent
+    :first-of-type 	        p:first-of-type 	    Selects every <p> element that is the first <p> element of its parent
+    :focus 	                input:focus 	        Selects the <input> element that has focus
+    :hover 	                a:hover 	            Selects links on mouse over
+    :in-range 	            input:in-range  	    Selects <input> elements with a value within a specified range
+    :invalid 	            input:invalid 	        Selects all <input> elements with an invalid value
+    :lang(language) 	    p:lang(it) 	            Selects every <p> element with a lang attribute value starting with "it"
+    :last-child 	        p:last-child 	        Selects every <p> elements that is the last child of its parent
+    :last-of-type 	        p:last-of-type 	        Selects every <p> element that is the last <p> element of its parent
+    :link 	                a:link 	                Selects all unvisited links
+    :not(selector) 	        :not(p) 	            Selects every element that is not a <p> element
+    :nth-child(n) 	        p:nth-child(2) 	        Selects every <p> element that is the second child of its parent
+    :nth-last-child(n) 	    p:nth-last-child(2) 	Selects every <p> element that is the second child of its parent, counting from the last child
+    :nth-last-of-type(n) 	p:nth-last-of-type(2) 	Selects every <p> element that is the second <p> element of its parent, counting from the last child
+    :nth-of-type(n) 	    p:nth-of-type(2) 	    Selects every <p> element that is the second <p> element of its parent
+    :only-of-type 	        p:only-of-type 	        Selects every <p> element that is the only <p> element of its parent
+    :only-child 	        p:only-child 	        Selects every <p> element that is the only child of its parent
+    :optional 	            input:optional 	        Selects <input> elements with no "required" attribute
+    :out-of-range 	        input:out-of-range 	    Selects <input> elements with a value outside a specified range
+    :read-only 	            input:read-only 	    Selects <input> elements with a "readonly" attribute specified
+    :read-write 	        input:read-write 	    Selects <input> elements with no "readonly" attribute
+    :required 	            input:required 	        Selects <input> elements with a "required" attribute specified
+    :root 	                root 	                Selects the document's root element
+    :target 	            #news:target 	        Selects the current active #news element (clicked on a URL containing that anchor name)
+    :valid 	                input:valid 	        Selects all <input> elements with a valid value
+    :visited 	            a:visited 	            elects all visited links
+
+    The following properties apply to the ::first-line pseudo-element:
+
+    font properties
+    color properties
+    background properties
+    word-spacing
+    letter-spacing
+    text-decoration
+    vertical-align
+    text-transform
+    line-height
+    clear
+    
+    The following properties apply to the ::first-letter pseudo- element: 
+
+    font properties
+    color properties 
+    background properties
+    margin properties
+    padding properties
+    border properties
+    text-decoration
+    vertical-align (only if "float" is "none")
+    text-transform
+    line-height
+    float
+    clear
+
+CSS [attribute] Selector
+
+    The [attribute] selector is used to select elements with a specified attribute.
+
+    The following example selects all <a> elements with a target attribute:
+    Example
+    a[target] {
+    background-color: yellow;
+    } 
+
+    The [attribute="value"] selector is used to select elements with a specified attribute and value.
+
+    The following example selects all <a> elements with a target="_blank" attribute:
+    Example
+    a[target="_blank"] {
+    background-color: yellow;
+    } 
+
+    CSS [attribute~="value"] Selector
+
+    The [attribute~="value"] selector is used to select elements with an attribute value containing a specified word.
+
+    The following example selects all elements with a title attribute that contains a space-separated list of words, one of which is "flower":
+    Example
+    [title~="flower"] {
+    border: 5px solid yellow;
+    } 
+
+    CSS [attribute|="value"] Selector
+
+    The [attribute|="value"] selector is used to select elements with the specified attribute, 
+    whose value can be exactly the specified value, or the specified value followed by a hyphen (-).
+
+    Note: The value has to be a whole word, either alone, like class="top", or followed by a hyphen( - ), like class="top-text".
+    Example
+    [class|="top"] {
+    background: yellow;
+    } 
+
+    CSS [attribute^="value"] Selector
+
+    The [attribute^="value"] selector is used to select elements with the specified attribute, 
+    whose value starts with the specified value.
+
+    The following example selects all elements with a class attribute value that starts with "top":
+
+    Note: The value does not have to be a whole word!
+    Example
+    [class^="top"] {
+    background: yellow;
+    } 
+
+    CSS [attribute$="value"] Selector
+
+    The [attribute$="value"] selector is used to select elements whose attribute value ends with a specified value.
+
+    The following example selects all elements with a class attribute value that ends with "test":
+
+    Note: The value does not have to be a whole word!  
+    Example
+    [class$="test"] {
+    background: yellow;
+    } 
+
+    CSS [attribute*="value"] Selector
+
+    The [attribute*="value"] selector is used to select elements whose attribute value contains a specified value.
+
+    The following example selects all elements with a class attribute value that contains "te":
+
+    Note: The value does not have to be a whole word!  
+    Example
+    [class*="te"] {
+    background: yellow;
+    } 
+
+    All CSS Attribute Selectors
+    Selector 	            Example 	            Example description
+    [attribute] 	        [target] 	            Selects all elements with a target attribute
+    [attribute=value] 	    [target="_blank"] 	    Selects all elements with target="_blank"
+    [attribute~=value] 	    [title~="flower"] 	    Selects all elements with a title attribute that contains a space-separated list of words, one of which is "flower"
+    [attribute|=value] 	    [lang|="en"] 	        Selects all elements with a lang attribute value starting with "en"
+    [attribute^=value] 	    a[href^="https"] 	    Selects all <a> elements with a href attribute value starting with "https"
+    [attribute$=value] 	    a[href$=".pdf"] 	    Selects all <a> elements with a href attribute value ending with ".pdf"
+    [attribute*=value] 	    a[href*="w3schools"] 	Selects all <a> elements with a href attribute value containing the substring "w3schools"
+
+Automatic Numbering With Counters
+
+    CSS counters are like "variables". The variable values can be incremented by CSS rules (which will track how many times they are used).
+
+    To work with CSS counters we will use the following properties:
+
+        counter-reset - Creates or resets a counter
+        counter-increment - Increments a counter value
+        content - Inserts generated content
+        counter() or counters() function - Adds the value of a counter to an element
+
+    To use a CSS counter, it must first be created with counter-reset.
+
+    CSS Counter Properties
+    Property 	        Description
+    content 	        Used with the ::before and ::after pseudo-elements, to insert generated content
+    counter-increment 	Increments one or more counter values
+    counter-reset       Creates or resets one or more counters
+    counter() 	        Returns the current value of the named counter
+
+Absolute Lengths
+
+    The absolute length units are fixed and a length expressed in any of these will appear as exactly that size.
+
+    Absolute length units are not recommended for use on screen, because screen sizes vary so much. However, they can be used if the output medium is known, such as for print layout.
+    Unit 	Description
+    cm 	    centimeters
+    mm 	    millimeters
+    in 	    inches (1in = 96px = 2.54cm)
+    px * 	pixels (1px = 1/96th of 1in)
+    pt 	    points (1pt = 1/72 of 1in)
+    pc 	    picas (1pc = 12 pt)
+
+    * Pixels (px) are relative to the viewing device. For low-dpi devices, 1px is one device pixel (dot) of the display. For printers and high resolution screens 1px implies multiple device pixels.
+    Relative Lengths
+
+Relative length units specify a length relative to another length property. Relative length units scale better between different rendering mediums.
+
+    Unit 	Description 	
+    em 	    Relative to the font-size of the element (2em means 2 times the size of the current font) 	
+    ex 	    Relative to the x-height of the current font (rarely used) 	
+    ch 	    Relative to width of the "0" (zero) 	
+    rem 	Relative to font-size of the root element 	
+    vw 	    Relative to 1% of the width of the viewport* 	
+    vh 	    Relative to 1% of the height of the viewport* 	
+    vmin 	Relative to 1% of viewport's* smaller dimension 	
+    vmax 	Relative to 1% of viewport's* larger dimension 	
+    % 	    Relative to the parent element
+
+Specificity Hierarchy
+
+    Every CSS selector has its place in the specificity hierarchy.
+
+    There are four categories which define the specificity level of a selector:
+
+        Inline styles - Example: <h1 style="color: pink;">
+        IDs - Example: #navbar
+        Classes, pseudo-classes, attribute selectors - Example: .test, :hover, [href]
+        Elements and pseudo-elements - Example: h1, ::before
+
+    Note: Inline style gets a specificity value of 1000, and is always given the highest priority!
+
+    Note 2: There is one exception to this rule: if you use the !important rule, it will even override inline styles!
+
+What is !important?
+
+    The !important rule in CSS is used to add more importance to a property/value than normal.
+
+    In fact, if you use the !important rule, it will override ALL previous styling rules for that specific property on that element!
+
+    Maybe One or Two Fair Uses of !important
+
+    One way to use !important is if you have to override a style that cannot be overridden in any other way. This could be if you are working on a Content Management System (CMS) and cannot edit the CSS code. Then you can set some custom styles to override some of the CMS styles.
+
+    Another way to use !important is: Assume you want a special look for all buttons on a page. Here, buttons are styled with a gray background color, white text, and some padding and border:
+    Example
+    .button {
+    background-color: #8c8c8c;
+    color: white;
+    padding: 5px;
+    border: 1px solid black;
+    }
+
+    The look of a button can sometimes change if we put it inside another element with higher specificity, and the properties get in conflict.
+
+The calc() Function
+
+    The calc() function performs a calculation to be used as the property value.
+    CSS Syntax
+    calc(expression)
+    Value 	        Description
+    expression 	    equired. A mathematical expression. The result will be used as the value.
+                    The following operators can be used: + - * /
+
+    The max() Function
+
+    The max() function uses the largest value, from a comma-separated list of values, as the property value.
+    CSS Syntax
+    max(value1, value2, ...)
+    Value 	Description
+    value1, value2, ... 	Required. A list of comma-separated values - where the largest value is chosen
+
+    Let us look at an example:
+    Example
+
+    Use max() to set the width of #div1 to whichever value is largest, 50% or 300px:
+    #div1 {
+    background-color: yellow;
+    height: 100px;
+    width: max(50%, 300px);
+    } 
+
+    The min() Function
+
+    The min() function uses the smallest value, from a comma-separated list of values, as the property value.
+    CSS Syntax
+    min(value1, value2, ...)
+
+CSS Grid Layout Module
+
+    The CSS Grid Layout Module offers a grid-based layout system, with rows and columns, 
+    making it easier to design web pages without having to use floats and positioning.
+
+    A grid layout consists of a parent element, with one or more child elements.
+
+    An HTML element becomes a grid container when its display property is set to grid or inline-grid.
+
+    All direct children of the grid container automatically become grid items.
+
+    You can adjust the gap size by using one of the following properties:
+
+    column-gap
+    row-gap
+    gap
+
+    Grid Lines
+
+    The lines between columns are called column lines.
+
+    The lines between rows are called row lines
+
+    All CSS Grid Properties
+    Property 	            Description
+    column-gap 	            Specifies the gap between the columns
+    gap 	                A shorthand property for the row-gap and the column-gap properties
+    grid 	                A shorthand property for the grid-template-rows, grid-template-columns, grid-template-areas, grid-auto-rows, grid-auto-columns, and the grid-auto-flow properties
+    grid-area 	            Either specifies a name for the grid item, or this property is a shorthand property for the grid-row-start, grid-column-start, grid-row-end, and grid-column-end properties
+    grid-auto-columns 	    Specifies a default column size
+    grid-auto-flow 	        Specifies how auto-placed items are inserted in the grid
+    grid-auto-rows 	        Specifies a default row size
+    grid-column 	        A shorthand property for the grid-column-start and the grid-column-end properties
+    grid-column-end 	    Specifies where to end the grid item
+    grid-column-gap 	    Specifies the size of the gap between columns
+    grid-column-start 	    Specifies where to start the grid item
+    grid-gap 	            A shorthand property for the grid-row-gap and grid-column-gap properties
+    grid-row 	            A shorthand property for the grid-row-start and the grid-row-end properties
+    grid-row-end 	        Specifies where to end the grid item
+    grid-row-gap 	        Specifies the size of the gap between rows
+    grid-row-start 	        Specifies where to start the grid item
+    grid-template 	        A shorthand property for the grid-template-rows, grid-template-columns and grid-areas properties
+    grid-template-areas 	Specifies how to display columns and rows, using named grid items
+    grid-template-columns 	Specifies the size of the columns, and how many columns in a grid layout
+    grid-template-rows 	    Specifies the size of the rows in a grid layout
+    row-gap 	            Specifies the gap between the grid rows
+
+    The align-content Property
+
+    The align-content property is used to vertically align the whole grid inside the container.
+
+Responsive Web Design
+
+    What is The Viewport?
+
+    The viewport is the user's visible area of a web page.
+
+    The viewport varies with the device, and will be smaller on a mobile phone than on a computer screen.
+
+    Before tablets and mobile phones, web pages were designed only for computer screens, and it was common for web pages to have a static design and a fixed size.
+
+    Then, when we started surfing the internet using tablets and mobile phones, fixed size web pages were too large to fit the viewport. To fix this, browsers on those devices scaled down the entire web page to fit the screen.
+
+    This was not perfect!! But a quick fix.
+    Setting The Viewport
+
+    HTML5 introduced a method to let web designers take control over the viewport, through the <meta> tag.
+
+    You should include the following <meta> viewport element in all your web pages:
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    This gives the browser instructions on how to control the page's dimensions and scaling.
+
+    The width=device-width part sets the width of the page to follow the screen-width of the device (which will vary depending on the device).
+
+    The initial-scale=1.0 part sets the initial zoom level when the page is first loaded by the browser.
+
+    Building a Responsive Grid-View
+
+    Lets start building a responsive grid-view.
+
+    First ensure that all HTML elements have the box-sizing property set to border-box. This makes sure that the padding and border are included in the total width and height of the elements.
+
+    Add the following code in your CSS:
+    * {
+    box-sizing: border-box;
+    }
+
+    What is a Media Query?
+
+    Media query is a CSS technique introduced in CSS3.
+
+    It uses the @media rule to include a block of CSS properties only if a certain condition is true.
+    Example
+
+    If the browser window is 600px or smaller, the background color will be lightblue:
+    @media only screen and (max-width: 600px) {
+    body {
+        background-color: lightblue;
+    }
+    }
+
+    Always Design for Mobile First
+
+    Mobile First means designing for mobile before designing for desktop or any other device (This will make the page display faster on smaller devices).
+
+    This means that we must make some changes in our CSS.
+
+    Instead of changing styles when the width gets smaller than 768px, we should change the design when the width gets larger than 768px. 
+    This will make our design Mobile First
+
+    Typical Device Breakpoints
+
+    There are tons of screens and devices with different heights and widths, so it is hard to create an exact breakpoint for each device. To keep things simple you could target five groups:
+    Example
+    /* Extra small devices (phones, 600px and down) */
+    @media only screen and (max-width: 600px) {...}
+
+    /* Small devices (portrait tablets and large phones, 600px and up) */
+    @media only screen and (min-width: 600px) {...}
+
+    /* Medium devices (landscape tablets, 768px and up) */
+    @media only screen and (min-width: 768px) {...}
+
+    /* Large devices (laptops/desktops, 992px and up) */
+    @media only screen and (min-width: 992px) {...}
+
+    /* Extra large devices (large laptops and desktops, 1200px and up) */
+    @media only screen and (min-width: 1200px) {...} 
+
+    Orientation: Portrait / Landscape
+
+    Media queries can also be used to change layout of a page depending on the orientation of the browser.
+
+    You can have a set of CSS properties that will only apply when the browser window is wider than its height, a so called "Landscape" orientation:
+    Example
+
+    The web page will have a lightblue background if the orientation is in landscape mode:
+    @media only screen and (orientation: landscape) {
+    body {
+        background-color: lightblue;
+    }
+    } 
+
+The CSS @font-face Rule
+
+    Web fonts allow Web designers to use fonts that are not installed on the user's computer.
+
+    When you have found/bought the font you wish to use, just include the font file on your web server, and it will be automatically downloaded to the user when needed.
+
+    Your "own" fonts are defined within the CSS @font-face rule.
+    Different Font Formats
+
+    TrueType Fonts (TTF)
+
+    TrueType is a font standard developed in the late 1980s, by Apple and Microsoft. TrueType is the most common font format for both the Mac OS and Microsoft Windows operating systems.
+
+    OpenType Fonts (OTF)
+
+    OpenType is a format for scalable computer fonts. It was built on TrueType, and is a registered trademark of Microsoft. 
+    OpenType fonts are used commonly today on the major computer platforms.
+
+    The Web Open Font Format (WOFF)
+
+    WOFF is a font format for use in web pages. It was developed in 2009, and is now a W3C Recommendation. 
+    WOFF is essentially OpenType or TrueType with compression and additional metadata. 
+    The goal is to support font distribution from a server to a client over a network with bandwidth constraints.
+
+    The Web Open Font Format (WOFF 2.0)
+
+    TrueType/OpenType font that provides better compression than WOFF 1.0.
+
+    SVG Fonts/Shapes
+
+    SVG fonts allow SVG to be used as glyphs when displaying text. 
+    The SVG 1.1 specification define a font module that allows the creation of fonts within an SVG document. 
+    You can also apply CSS to SVG documents, and the @font-face rule can be applied to text in SVG documents.
+
+    Embedded OpenType Fonts (EOT)
+
+    EOT fonts are a compact form of OpenType fonts designed by Microsoft for use as embedded fonts on web pages.
+
+CSS Font Descriptors
+
+    The following table lists all the font descriptors that can be defined inside the @font-face rule:
+    Descriptor 	Values 	Description
+    font-family 	name 	Required. Defines a name for the font
+    src 	URL 	Required. Defines the URL of the font file
+    font-stretch 	normal
+    condensed
+    ultra-condensed
+    extra-condensed
+    semi-condensed
+    expanded
+    semi-expanded
+    extra-expanded
+    ultra-expanded 	Optional. Defines how the font should be stretched. Default is "normal"
+    font-style 	normal
+    italic
+    oblique 	Optional. Defines how the font should be styled. Default is "normal"
+    font-weight 	normal
+    bold
+    100
+    200
+    300
+    400
+    500
+    600
+    700
+    800
+    900 	Optional. Defines the boldness of the font. Default is "normal"
+    unicode-range 	unicode-range 	Optional. Defines the range of UNICODE characters the font supports. 
+    Default is "U+0-10FFFF"
+
+CSS Transforms Methods
+
+    CSS 2D Transforms Methods
+
+    With the CSS transform property you can use the following 2D transformation methods:
+
+        translate()
+        rotate()
+        scaleX()
+        scaleY()
+        scale()
+        skewX()
+        skewY()
+        skew()
+        matrix()
+
+    The matrix() Method
+    Rotate
+
+    The matrix() method combines all the 2D transform methods into one.
+
+    The matrix() method take six parameters, containing mathematic functions, which allows you to rotate, scale, move (translate), and skew elements.
+
+    The parameters are as follow: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY())
+    Example
+    div {
+    transform: matrix(1, -0.3, 0, 1, 0, 0);
+    } 
+
+    CSS 3D Transforms Methods
+
+        With the CSS transform property you can use the following 3D transformation methods:
+
+        rotateX()
+        rotateY()
+        rotateZ()
+
+    The following table lists all the 3D transform properties:
+    Property 	                        Description
+    transform 	                        Applies a 2D or 3D transformation to an element
+    transform-origin 	                Allows you to change the position on transformed elements
+    transform-style 	                Specifies how nested elements are rendered in 3D space
+    perspective 	                    Specifies the perspective on how 3D elements are viewed
+    perspective-origin 	                Specifies the bottom position of 3D elements
+    backface-visibility 	            Defines whether or not an element should be visible when not facing the screen
+    
+    CSS 3D Transform Methods
+    Function 	                        Description
+    matrix3d
+    (n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n) 	Defines a 3D transformation, using a 4x4 matrix of 16 values
+    translate3d(x,y,z) 	                Defines a 3D translation
+    translateX(x) 	                    Defines a 3D translation, using only the value for the X-axis
+    translateY(y) 	                    Defines a 3D translation, using only the value for the Y-axis
+    translateZ(z) 	                    Defines a 3D translation, using only the value for the Z-axis
+    scale3d(x,y,z) 	                    Defines a 3D scale transformation
+    scaleX(x) 	                        Defines a 3D scale transformation by giving a value for the X-axis
+    scaleY(y) 	                        Defines a 3D scale transformation by giving a value for the Y-axis
+    scaleZ(z) 	                        Defines a 3D scale transformation by giving a value for the Z-axis
+    rotate3d(x,y,z,angle) 	            Defines a 3D rotation
+    rotateX(angle) 	                    Defines a 3D rotation along the X-axis
+    rotateY(angle) 	                    Defines a 3D rotation along the Y-axis
+    rotateZ(angle) 	                    Defines a 3D rotation along the Z-axis
+    perspective(n) 	                    Defines a perspective view for a 3D transformed element
+
+CSS Transitions
+
+    CSS transitions allows you to change property values smoothly, over a given duration.
+
+    In this chapter you will learn about the following properties:
+
+        transition
+        transition-delay
+        transition-duration
+        transition-property
+        transition-timing-function
+
+    How to Use CSS Transitions?
+
+    To create a transition effect, you must specify two things:
+
+        the CSS property you want to add an effect to
+        the duration of the effect
+
+    Note: If the duration part is not specified, the transition will have no effect, because the default value is 0.
+
+CSS Animations
+
+    CSS allows animation of HTML elements without using JavaScript!
+    CSS
+
+    In this chapter you will learn about the following properties:
+
+        @keyframes
+        animation-name
+        animation-duration
+        animation-delay
+        animation-iteration-count
+        animation-direction
+        animation-timing-function
+        animation-fill-mode
+        animation
+
+    What are CSS Animations?
+
+    An animation lets an element gradually change from one style to another.
+
+    You can change as many CSS properties you want, as many times as you want.
+
+    To use CSS animation, you must first specify some keyframes for the animation.
+
+    Keyframes hold what styles the element will have at certain times.
+    The @keyframes Rule
+
+    When you specify CSS styles inside the @keyframes rule, the animation will gradually change from the current style to the new style at certain times.
+
+    To get an animation to work, you must bind the animation to an element.
+
+    Run Animation in Reverse Direction or Alternate Cycles
+
+    The animation-direction property specifies whether an animation should be played forwards, backwards or in alternate cycles.
+
+    The animation-direction property can have the following values:
+
+        normal - The animation is played as normal (forwards). This is default
+        reverse - The animation is played in reverse direction (backwards)
+        alternate - The animation is played forwards first, then backwards
+        alternate-reverse - The animation is played backwards first, then forwards
+
+    Specify the fill-mode For an Animation
+
+    CSS animations do not affect an element before the first keyframe is played or after the last keyframe is played. The animation-fill-mode property can override this behavior.
+
+    The animation-fill-mode property specifies a style for the target element when the animation is not playing (before it starts, after it ends, or both).
+
+    The animation-fill-mode property can have the following values:
+
+        none - Default value. Animation will not apply any styles to the element before or after it is executing
+        forwards - The element will retain the style values that is set by the last keyframe (depends on animation-direction and animation-iteration-count)
+        backwards - The element will get the style values that is set by the first keyframe (depends on animation-direction), and retain this during the animation-delay period
+        both - The animation will follow the rules for both forwards and backwards, extending the animation properties in both directions
+
+    Animation Shorthand Property
+
+    The example below uses six of the animation properties:
+    Example
+    div {
+    animation-name: example;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    }
+
+    The same animation effect as above can be achieved by using the shorthand animation property:
+    Example
+    div {
+    animation: example 5s linear 2s infinite alternate;
+    }
+
+    CSS Animation Properties
+
+    The following table lists the @keyframes rule and all the CSS animation properties:
+
+    Property 	                Description
+    @keyframes 	                Specifies the animation code
+    animation 	                A shorthand property for setting all the animation properties
+    animation-delay 	        Specifies a delay for the start of an animation
+    animation-direction 	    Specifies whether an animation should be played forwards, backwards or in alternate cycles
+    animation-duration 	        Specifies how long time an animation should take to complete one cycle
+    animation-fill-mode 	    Specifies a style for the element when the animation is not playing (before it starts, after it ends, or both)
+    animation-iteration-count 	Specifies the number of times an animation should be played
+    animation-name 	            Specifies the name of the @keyframes animation
+    animation-play-state 	    Specifies whether the animation is running or paused
+    animation-timing-function 	Specifies the speed curve of the animation
+
+CSS Masking Properties
+
+    The following table lists all the CSS masking properties:
+    Property 	    Description
+    mask-clip 	    Specifies which area is affected by a mask image
+    mask-composite 	Specifies a compositing operation used on the current mask layer with the mask layers below it
+    mask-image 	    Specifies an image to be used as a mask layer for an element
+    mask-mode 	    Specifies whether the mask layer image is treated as a luminance mask or as an alpha mask
+    mask-origin 	Specifies the origin position (the mask position area) of a mask layer image
+    mask-position 	Sets the starting position of a mask layer image (relative to the mask position area)
+    mask-repeat 	Specifies how the mask layer image is repeated
+    mask-size 	    Specifies the size of a mask layer image
+
+CSS Multi-columns Properties
+
+    The following table lists all the multi-columns properties: 
+    Property 	        Description
+    column-count 	    Specifies the number of columns an element should be divided into
+    column-fill 	    Specifies how to fill columns
+    column-gap 	        Specifies the gap between the columns
+    column-rule 	    A shorthand property for setting all the column-rule-* properties
+    column-rule-color 	Specifies the color of the rule between columns
+    column-rule-style 	Specifies the style of the rule between columns
+    column-rule-width 	Specifies the width of the rule between columns
+    column-span 	    Specifies how many columns an element should span across
+    column-width 	    Specifies a suggested, optimal width for the columns
+    columns 	        A shorthand property for setting column-width and column-count
+
+CSS Variables - The var() Function
+
+    CSS Variables
+
+    The var() function is used to insert the value of a CSS variable.
+
+    CSS variables have access to the DOM, which means that you can create variables with local or global scope, 
+    change the variables with JavaScript, and change the variables based on media queries.
+
+    A good way to use CSS variables is when it comes to the colors of your design. 
+    Instead of copy and paste the same colors over and over again, you can place them in variables.
+
+    Syntax of the var() Function
+
+    The var() function is used to insert the value of a CSS variable.
+
+    The syntax of the var() function is as follows:
+    var(--name, value)
+    Value 	Description
+    name 	Required. The variable name (must start with two dashes)
+    value 	Optional. The fallback value (used if the variable is not found)
+
+    Note: The variable name must begin with two dashes (--) and it is case sensitive!
+    How var() Works
+
+    First of all: CSS variables can have a global or local scope.
+
+    Global variables can be accessed/used through the entire document, while local variables can be used only inside the selector where it is declared.
+
+    To create a variable with global scope, declare it inside the :root selector. The :root selector matches the document's root element.
+
+    To create a variable with local scope, declare it inside the selector that is going to use it.
+
+    The following example is equal to the example above, but here we use the var() function.
+
+CSS Media Queries
+
+    The @media rule, introduced in CSS2, made it possible to define different style rules for different media types.
+
+    Media queries in CSS3 extended the CSS2 media types idea: Instead of looking for a type of device, they look at the capability of the device.
+
+    Media queries can be used to check many things, such as:
+
+        width and height of the viewport
+        orientation of the viewport (landscape or portrait)
+        resolution
+
+    Using media queries are a popular technique for delivering a tailored style sheet to desktops, laptops, tablets, and mobile phones (such as iPhone and Android phones).
+    CSS Media Types
+    Value 	            Description
+    all 	            Used for all media type devices
+    print 	            Used for print preview mode
+    screen 	            Used for computer screens, tablets, smart-phones etc.
+
+    CSS Common Media Features
+
+    Here are some commonly used media features:
+    Value 	        Description
+    orientation 	Orientation of the viewport. Landscape or portrait
+    max-height 	    Maximum height of the viewport
+    min-height 	    Minimum height of the viewport
+    height 	        Height of the viewport (including scrollbar)
+    max-width 	    Maximum width of the viewport
+    min-width 	    Minimum width of the viewport
+    width 	        Width of the viewport (including scrollbar)
+
+    Media Query Syntax
+
+    A media query consists of a media type and can contain one or more media features, which resolve to either true or false.
+    @media not|only mediatype and (media feature) and (media feature) {
+    CSS-Code;
+    }
+
+    The mediatype is optional (if omitted, it will be set to all). However, if you use not or only, you must also specify a mediatype.
+
+    The result of the query is true if the specified media type matches the type of device the document is being displayed on and all media features in the media query are true. 
+    When a media query is true, the corresponding style sheet or style rules are applied, following the normal cascading rules.
+
+    Meaning of the not, only, and and keywords:
+
+    not: This keyword inverts the meaning of an entire media query.
+
+    only: This keyword prevents older browsers that do not support media queries from applying the specified styles. It has no effect on modern browsers.
+
+    and: This keyword combines a media type and one or more media features.
+
+    You can also link to different stylesheets for different media and different widths of the browser window (viewport):
+    <link rel="stylesheet" media="print" href="print.css">
+    <link rel="stylesheet" media="screen" href="screen.css">
+    <link rel="stylesheet" media="screen and (min-width: 480px)" href="example1.css">
+    <link rel="stylesheet" media="screen and (min-width: 701px) and (max-width: 900px)" href="example2.css">
+    etc....
+
+CSS Flex Container
+
+    The flex container properties are:
+
+        flex-direction
+        flex-wrap
+        flex-flow
+        justify-content
+        align-items
+        align-content
+
+    The CSS Flexbox Container Properties
+
+    The following table lists all the CSS Flexbox Container properties:
+    Property 	        Description
+    align-content 	    Modifies the behavior of the flex-wrap property. It is similar to align-items, but instead of aligning flex items, it aligns flex lines
+    align-items 	    Vertically aligns the flex items when the items do not use all available space on the cross-axis
+    display 	        Specifies the type of box used for an HTML element
+    flex-direction 	    Specifies the direction of the flexible items inside a flex container
+    flex-flow 	        A shorthand property for flex-direction and flex-wrap
+    flex-wrap 	        Specifies whether the flex items should wrap or not, if there is not enough room for them on one flex line
+    justify-content 	Horizontally aligns the flex items when the items do not use all available space on the main-axis
+
+    The flex item properties are:
+
+    order
+    flex-grow
+    flex-shrink
+    flex-basis
+    flex
+    align-self
+
+
 
 
 
