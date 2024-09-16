@@ -1,6 +1,15 @@
+/* root using CSS variables */
+:root {
+  --bronze: rgb(126, 82, 0); /* Local variable will override this global one */
+}
+
 /* Main Body */
 body {
     background-color: lightcyan;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 /* may not need to keep, testing for smooth scroll with same page links */
@@ -13,7 +22,7 @@ body {
 /* Headings */
 h1, h2, h3, h4 {
     text-align: center;
-    color: rgb(126, 82, 0);
+    color: var(--bronze);
     text-shadow: 2px 2px rgb(197, 197, 197);
 }
 
@@ -42,12 +51,12 @@ nav {
 
 .navA {
     display: inline;
-    margin: 2px;
+    font-size: 1em;
 }
 
 a {
     color: black;
-    font-size: 1em;
+    font-size: 1.5em;
 }
 
 /* Unvisited Link */
@@ -64,14 +73,14 @@ a:visited {
 
 /* Mouse Over Link | A hover style MUST come after a:link and a:visited */
 a:hover {
-    background-color: rgb(126, 82, 0);
+    background-color: white;
     padding: 18px;
     font-size: 150%;
 }
 
 /* Selected Link | An active style MUST come after a hover */
 a:active {
-    background-color: rgb(126, 82, 0);
+    background-color: var(--bronze);
     padding: 18px;
 }
 
@@ -84,12 +93,13 @@ a:active {
 .main {
     /* border-style: inset; */
     border-radius: 5px;
+    flex: 45%;
 }
 
 .section {
     border-style: inset;
     border-radius: 10px;
-    background-color: red; /* For browsers that do not support gradients */
+    background-color: violet; /* For browsers that do not support gradients */
     background-image: linear-gradient(to right, #00ffff , #ff00ff);
 }
 
@@ -98,18 +108,29 @@ a:active {
     border-radius: 10px;
 }
 
+.left {
+  flex: 30%;
+}
+
 .aside {
     border-style: inset;
     border-radius: 10px;
+    flex: 25%;
 }
 
 .footer {
     display: inline;
 }
 
+.bottom {
+  background-color: purple;
+  height: auto;
+  width: 100%;
+}
+
 /* Small Details */
 p {
-    color: rgb(126, 82, 0);
+    color: var(--bronze);
     font-family: Verdana, sans-serif;
     margin: 5px 10px;
 }
@@ -192,7 +213,7 @@ p.a {
   }
     
   ol {
-    background: #ffbc58;
+    background: violet;
     padding: 20px;
   }
   
@@ -272,6 +293,7 @@ ul li:hover {
   border-radius: 5px;
   cursor: pointer;
   transition: 0.3s;
+  margin: auto;
 }
 
 #myImg:hover {opacity: 0.7;}
@@ -338,7 +360,7 @@ ul li:hover {
 }
 
 .button {
-  background-color: #04AA6D; /* Green */
+  background-color: #ff00ff; /* Green */
   border: none;
   color: white;
   padding: 15px 32px;
@@ -375,6 +397,7 @@ ul li:hover {
 
 .button {
   transition-duration: 2s;
+  transform: translate(100px, 0px);
 }
 
 .button span {
@@ -418,4 +441,82 @@ span {
   .modal-content {
     width: 100%;
   }
+}
+
+@media screen and (max-width: 1200px) {
+  body {
+    background-color: #b6ffc0;
+  }
+  .navA {
+    margin: 0 3px;
+  }
+  .left {
+    flex: 50%;
+    max-width: 50%;
+    padding: 20px;
+  }
+  .main {
+    flex: 50%;
+    max-width: 50%;
+    padding: 20px;
+  }
+  .aside {
+    flex: 100%;
+    max-width: 100%;
+    margin: 20px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    background-color: #f5c7f5
+  }
+  .flex-container {
+    flex-direction: column;
+  }
+  .left, .main, .aside {
+    flex: 100%;
+    max-width: 100%;
+  }
+  .aside {
+    margin: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    background-color: white;
+  }
+  .navA {
+    float: left;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+    background-color: #333;
+  }
+  .left, .main, .aside {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+div.ex1 {
+  margin: 20px;
+  border: 1px solid black;
+  outline: 4px solid purple;
+  outline-offset: 15px;
+  overflow: hidden;
+} 
+
+div.ex2 {
+  margin: 10px;
+  border: 1px solid black;
+  outline: 5px dashed blue;
+  outline-offset: 5px;
+} 
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
 }
